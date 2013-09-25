@@ -15,13 +15,16 @@
   
   <script type="text/javascript" src="spec/hello_world_spec.js"></script>
     <script type="text/javascript" src="spec/random_num_spec.js"></script>
+    <script type="text/javascript" src="spec/compare_spec.js"></script>
 
 
   <!-- include spec files here... -->
   <script type="text/javascript" src="src/hello_world.js"></script>
     <script type="text/javascript" src="src/random_num.js"></script>
+  <script type="text/javascript" src="src/compare.js"></script>
 
-  <script type="text/javascript">
+
+    <script type="text/javascript">
     (function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
@@ -61,7 +64,8 @@
  <input type="text" /><br />
 
 
-input four numbers:<input type="text" /><br />  <button>yes</button>
+input four numbers:<input id="input_num" type="text" /><br />
+<button id="commit_num" onclick="userCommit()" >commit</button>  <span id="label01">结果</span>
 
 </body>
 </html>

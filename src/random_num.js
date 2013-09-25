@@ -26,11 +26,11 @@ function createRandomNum() {
     var randomNum = new Array()
     var tmp=-1;
     var repeat=false;
-    for (i=0;i<4;i++)
+    for (var i=0;i<4;i++)
     {
         repeat=0;
         tmp=parseInt(Math.random() * 10);
-        for(j=0;j<i;j++)
+        for(var j=0;j<i;j++)
         {
             if(tmp==randomNum[j])
             {
@@ -53,8 +53,8 @@ function createRandomNum() {
 //    for(i=0;i<4;i++)
 //    {
 //        o[i].value=randomNum[i];
-//    }
-   return  randomNum;
+//      }
+    return  randomNum;
 
 
 
