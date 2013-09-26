@@ -3,10 +3,10 @@ counts=0;
 
 function userCommit()
 {
-    var rnunber=getrandm();
-    var unumber=getinput();
-    compareNum(rnunber,unumber);
-    showresult(compareNum(rnunber,unumber));
+    var r_number=getrandm();
+    var u_number=getinput();
+    compareNum(r_number,u_number);
+    showresult(compareNum(r_number,u_number));
     return true;
 }
 
@@ -45,7 +45,7 @@ function compareNum(rnumber,unumber)
 
 function getrandm()
 {
-        var thisnumber=createRandomNum();
+       var  thisnumber=new_random_number;
         thisnumber.toString();
         return thisnumber;
 
