@@ -3,58 +3,24 @@ counts=0;
 
 function userCommit()
 {
-
-
-    var thisnumber=createRandomNum();
-
-    var m=0,n= 0,nx=0;
-
-//    var thisnumber=createRandomNum();
- //   document.getElementById("input_num").value="1234";
-    user_num= document.getElementById("input_num").value;
-     thisnumber.toString();
+    var rnunber=getrandm();
+    var unumber=getinput();
+    compareNum(rnunber,unumber);
+    showresult(compareNum(rnunber,unumber));
+    return true;
+}
 
 
 
-//    var x = parseInt(user_num);
 
-//    var xnum = new Array();
-//    xnum[0]=x/1000;
-//    x=x%1000;
-//    xnum[1]=x/100;
-//    x=x%100;
-//    xnum[2]=x/10;
-//    x=x%10;
-//    xnum[3]=x/1;
-
-
-//    for(var i=0;i<4;i++)
-//    {
-//        if(xnum[i]===thisnumber[i])
-//        {
-//            m++
-//        }
-//
-//    }
-//
-//    for(var i=0;i<4;i++)
-//    {
-//        for(var j=i;j<4;j++)
-//        {
-//            if(xnum[i]===thisnumber[j])
-//            {
-//                nx++;
-//            }
-//
-//        }
-//    }
-
-
+function compareNum(rnumber,unumber)
+{
+    var m_counts=0,n_counts= 0,nx_counts=0;
     for(var i=0;i<4;i++)
     {
-        if(user_num[i]==thisnumber[i])
+        if(rnumber[i]==unumber[i])
         {
-            m++
+            m_counts++
         }
 
     }
@@ -63,30 +29,39 @@ function userCommit()
     {
         for(var j=0;j<4;j++)
         {
-            if(user_num[i]==thisnumber[j])
+            if(rnumber[i]==unumber[j])
             {
-                nx++;
+                nx_counts++;
             }
 
         }
     }
 
-    n=nx-m;
+    n_counts=nx_counts-m_counts;
 
+    return m_counts+"A"+n_counts+"B";
 
-
-
-    user_result=m+"A"+n+"B";
-    console.log(thisnumber)
-    console.log(user_num)
-    console.log(user_result)
-    document.getElementById("label01").innerText=user_result;
-
-
-//    counts++;
-//    if(counts>6)
-//    {
-//        count_times();
-//    }
-    return true;
 }
+
+function getrandm()
+{
+        var thisnumber=createRandomNum();
+        thisnumber.toString();
+        return thisnumber;
+
+}
+
+function getinput()
+{
+    var user_num= document.getElementById("input_num").value;
+    return user_num;
+}
+
+function showresult(game_result)
+{
+    document.getElementById("label01").innerText=game_result;
+}
+
+
+
+
