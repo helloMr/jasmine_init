@@ -1,5 +1,4 @@
 
-counts=0;
 
 function userCommit()
 {
@@ -15,12 +14,12 @@ function userCommit()
 
 function compareNum(rnumber,unumber)
 {
-    var m_counts=0,n_counts= 0,nx_counts=0;
+    var a_counts=0,b_counts= 0,bx_counts=0;
     for(var i=0;i<4;i++)
     {
         if(rnumber[i]==unumber[i])
         {
-            m_counts++
+            a_counts++
         }
 
     }
@@ -31,15 +30,15 @@ function compareNum(rnumber,unumber)
         {
             if(rnumber[i]==unumber[j])
             {
-                nx_counts++;
+                bx_counts++;
             }
 
         }
     }
 
-    n_counts=nx_counts-m_counts;
+    b_counts=bx_counts-a_counts;
 
-    return m_counts+"A"+n_counts+"B";
+    return a_counts+"A"+b_counts+"B";
 
 }
 

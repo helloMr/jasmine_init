@@ -1,9 +1,4 @@
 
-function count_times()
-{
-   // document.getElementById("label01").innerText="超过6次";
-
-}
 
 function userRandomNum()
 {
@@ -13,25 +8,45 @@ function userRandomNum()
 }
 
 //测试实例
-var count_times=0;
 
-function get_mockRandomNum()
+
+function get_mock_random_num()
 {
     return 1234;
 }
 
 
 
-function get_mockUser()
+function get_mock_user_num()
 {
-    return createRandomNum();
+    var mock_user_num=createRandomNum();
+    mock_user_num.toString();
+    return   mock_user_num;
 }
 
-function playGame()
+
+//rand_number="1234"
+ // user_number   ="1234"
+function count_times(rand_number,user_number)
 {
-    if(count_times.)
-    compareNum(get_mockRandomNum(),get_mockUser());
-    count_times++;
+    var success_result=4+"A"+0+"B";
+    var counts=1;
+    var per_result=compareNum(rand_number,user_number[0]);
+
+    if(user_number.length<7)
+    {
+        for( var i=1; i< user_number.length;i++)
+        {
+            if(per_result!=success_result)
+            {
+                per_result =  compareNum(rand_number,user_number[i]);
+                counts++;
+            }
+            else break;
+
+        }
+        return counts;
+    }
 }
 
 
