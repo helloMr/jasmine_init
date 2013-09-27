@@ -30,23 +30,80 @@ function get_mock_user_num()
 function count_times(rand_number,user_number)
 {
     var success_result=4+"A"+0+"B";
-    var counts=1;
-    var per_result=compareNum(rand_number,user_number[0]);
+    var times= 1,success_tag=false;
+//    var per_result=compareNum(rand_number,user_number[0]);
 
-    if(user_number.length<7)
+
+    if (user_number.length < 7)
     {
-        for( var i=1; i< user_number.length;i++)
-        {
-            if(per_result!=success_result)
-            {
-                per_result =  compareNum(rand_number,user_number[i]);
-                counts++;
+        for (var i = 0; i < user_number.length; i++) {
+            per_result   = compareNum(rand_number, user_number[i]);
+            if (per_result != success_result) {
+
+                times++;
             }
-            else break;
+            else {
+                success_tag=true;
+                break;
+            }
 
         }
-        return counts;
+
+        if(success_tag==true)
+        {
+            return times;
+        }
+        else
+        {
+            return 0;
+        }
+
     }
+
+
+
+//
+//    if (user_number.length < 7)
+//    {
+//        for (var i = 1; i < user_number.length; i++) {
+//            if (per_result != success_result) {
+//                per_result = compareNum(rand_number, user_number[i]);
+//                times++;
+//            }
+//            else {
+//                  success_tag=true;
+//                break;
+//            }
+//
+//        }
+//
+//        if(success_tag==true)
+//        {
+//            return times;
+//        }
+//        else
+//        {
+//            return 0;
+//        }
+//
+//    }
+
+
+//    if(user_number.length<7)
+//    {
+//        for( var i=1; i< user_number.length;i++)
+//        {
+//            if(per_result!=success_result)
+//            {
+//                per_result =  compareNum(rand_number,user_number[i]);
+//                counts++;
+//            }
+//            else break;
+//
+//        }
+//        return counts;
+//    }
+
 }
 
 
